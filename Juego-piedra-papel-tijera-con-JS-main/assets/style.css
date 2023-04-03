@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: brown;
+
+}
+.section{
+    height: 100vh;
+    background-color: blueviolet;
+
+}
+.puntajes{
+    height: 20vh;
+    display: flex;/*elemento al lado del otro*/
+    justify-content: space-around;
+    align-items: center;
+}
+.puntajes h2{
+    font-size: 40px;
+}
+.puntajes p{
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+
+}
+.tablero{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: opacity 0.5s ease0.5s;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+.tablero button{
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: blueviolet;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.tablero button img{
+    height: 40px;
+    
+}
+.tablero button:hover{
+    background-color: aqua;
+}
+.tablero button:focus{
+    outline: 0;
+}
+.opciones{
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+.resultado{
+   text-align: center;
+   font-size:50px ;
+   margin-bottom: 1rem;
+}
+.manos img{
+    width: 250px;
+}
+
+.final{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+
+
+}
+@media only screen and (max-width:768px) {
+    .manos img{
+        width: 150px;
+    }
+    .puntajes{
+        font-size: 18px;
+    }
+    .resultado{
+        font-size: 28px;
+    }
+    .tablero button{
+        width: 80px;
+        height: 80px;
+    }
+    .tablero button img{
+        height: 40px;
+    }
+}
+@keyframes shake {
+    0%{
+        transform: translateY(0px);
+    }
+    15% {
+        transform: translateY(-25px);
+      }
+      25% {
+        transform: translateY(0px);
+      }
+      35% {
+        transform: translateY(-25px);
+      }
+      50% {
+        transform: translateY(0px);
+      }
+      65% {
+        transform: translateY(-25px);
+      }
+      75% {
+        transform: translateY(0px);
+      }
+      85% {
+        transform: translateY(-25px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+.jugando .manos img{
+    animation: shake 2s ease;
+}
